@@ -97,7 +97,8 @@ public class DataStructure {
 
        }
     
-       MyHashMap<Integer, Integer> myHash=new MyHashMap<Integer, Integer>();
+       MyHashMap<Integer,Integer> myHash=new MyHashMap<Integer,Integer>();
+      
        
     
 }
