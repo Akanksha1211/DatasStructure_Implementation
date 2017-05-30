@@ -29,6 +29,12 @@ public class MyStack{
         
     }
     
+    public int hashCode(){
+    
+        return a.size()%5;
+    }
+    
+    
     public Object peek(){
        int size=a.size(); 
        Object v= a.get(--size);

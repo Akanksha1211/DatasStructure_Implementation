@@ -65,12 +65,26 @@ public class MyLinkedList<T> {
         
     }
     
+    public Node reverse(Node head){
+        Node currentNode=head;
+        Node previous=null;
+        
+        while(currentNode!=null){
+           Node temp=currentNode.getNext();
+           currentNode.setNext(previous);
+           previous=currentNode;
+           currentNode=temp;
+        }
+        return previous;
+    }
     
-    
-    public void printList(){
+    public Node getHead(){
+        return head;
+    }
+    public void printList(Node head){
         Node n=head;
         while(n!=null){
-         System.out.println(n.getData());   
+         System.out.print(" "+n.getData()+"  ");   
          n=n.getNext();
         }  
         

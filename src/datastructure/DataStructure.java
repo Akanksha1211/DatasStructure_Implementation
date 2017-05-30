@@ -5,7 +5,7 @@
  */
 package datastructure;
 
-;
+import java.util.HashMap;
 
 /**
  *
@@ -39,27 +39,49 @@ public class DataStructure {
         System.out.println((t.root.getData()));
 
         
-        MyLinkedList<Object> l =new MyLinkedList<>();
+        MyLinkedList l =new MyLinkedList();
        
-        l.add(33333);
-        l.add(12222);
-        l.add("sdfd");
-        l.add(33333);
-        l.removeData("sdfd");
-        l.add(33333);
-        l.removeData(33333);
-        l.printList();
+        l.add(1);
+        l.add(2);
+        l.add(3);
+        l.add(4);
+        //l.removeData(33333);
+        l.printList(l.getHead());
+       
+       
+        Node newHead= l.reverse(l.getHead());
+        l.printList(newHead);
         
         MyQueue q=new MyQueue();
         q.push(1);
         q.push(2);
         q.poll();
         q.peek();
-         
-        
+   
         MyStack s=new MyStack();
+        HashMap<MyStack,MyStack> ds=new HashMap<>();
+        
+        ds.put(s, s);
+        
         s.push(1);
+        s.push(2);
+        
+        ds.put(s,s);
+        
+        System.out.println("dfgvr "+s.hashCode());
+        s.push(5);
+        s.push(7);
         s.push("Akanksha");
+        
+        ds.put(s,s);
+        
+        for(MyStack s1: ds.keySet()){
+            System.out.println("Keys "+s1);
+        }
+        
+        System.out.println("Value "+ds.get(s));
+        
+        System.out.println("dfgvr "+s.hashCode());
         System.out.print(q.peek());
         System.out.print(s.pop());
         System.out.print(s.pop());
@@ -74,5 +96,8 @@ public class DataStructure {
         System.out.println("Size Before"+al.size());
 
        }
-
+    
+       MyHashMap<Integer, Integer> myHash=new MyHashMap<Integer, Integer>();
+       
+    
 }
