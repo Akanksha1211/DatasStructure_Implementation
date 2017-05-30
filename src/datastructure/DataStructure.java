@@ -76,12 +76,12 @@ public class DataStructure {
         ds.put(s,s);
         
         for(MyStack s1: ds.keySet()){
-            System.out.println("Keys "+s1);
+          //  System.out.println("Keys "+s1);
         }
         
-        System.out.println("Value "+ds.get(s));
+        //System.out.println("Value "+ds.get(s));
         
-        System.out.println("dfgvr "+s.hashCode());
+        //System.out.println("dfgvr "+s.hashCode());
         System.out.print(q.peek());
         System.out.print(s.pop());
         System.out.print(s.pop());
@@ -94,11 +94,16 @@ public class DataStructure {
         System.out.println("Size Before"+al.size());
         al.remove(5);
         System.out.println("Size Before"+al.size());
-
+        
+         MyHashMap<Integer,Integer> myHash=new MyHashMap<Integer,Integer>();
+         myHash.put(1, 1);
+         myHash.put(2, 2);
+         myHash.put(1, 1);
+         
+         HashEntry value=myHash.get(1);
+         System.out.println("Value " +value.getValue());
        }
     
-       MyHashMap<Integer,Integer> myHash=new MyHashMap<Integer,Integer>();
       
-       
-    
+      
 }

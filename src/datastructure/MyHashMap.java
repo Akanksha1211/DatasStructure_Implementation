@@ -54,7 +54,7 @@ public class MyHashMap<K,V> {
         
         HashEntry current=table[bucketnumber];
         
-        while(current.next!=null){
+        while(current!=null){
             if(current.getKey().equals(Key)){
                 return current;
             }
